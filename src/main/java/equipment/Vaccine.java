@@ -5,7 +5,8 @@ public abstract class Vaccine {
     private float quantity;
     private String chemicalFormula;
     private boolean usedBeforeInfection;
-    private boolean usedAfterInfection,useOnFever;
+    private boolean usedAfterInfection;
+    private boolean useOnFever;
     private boolean empty=false;
 
     public abstract float inject();

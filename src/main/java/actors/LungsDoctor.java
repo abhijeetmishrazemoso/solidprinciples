@@ -16,7 +16,7 @@ public class LungsDoctor extends Doctor {
     }
 
     @Override
-    public boolean vaccinate(Vaccine vaccine, Patient patient) {
+    public boolean isVaccinationSuccessful(Vaccine vaccine, Patient patient) {
         if (!vaccine.isUseOnFever() && patient.isHasFever())
             return false;
         if (patient == null || vaccine == null) throw new IllegalArgumentException("Patient or vaccine null!");

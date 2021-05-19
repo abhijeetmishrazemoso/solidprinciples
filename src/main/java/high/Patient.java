@@ -5,12 +5,12 @@ import java.util.Objects;
 public class Patient {
     private String name;
     private String aadhar;
-    private boolean isVaccinated=false;
+    private boolean vaccinated =false;
     private boolean isInfected=false;
     private boolean hasFever=false;
 
     public boolean isVaccinated() {
-        return isVaccinated;
+        return vaccinated;
     }
 
     public boolean isInfected() {
@@ -24,7 +24,7 @@ public class Patient {
     }
 
     public void recieveVaccine(float amount){
-        isVaccinated = true;
+        vaccinated = true;
     }
 
     public void setHasFever(boolean hasFever) {
@@ -53,7 +53,7 @@ public class Patient {
         return "Patient{" +
                 "name='" + name + '\'' +
                 ", aadhar='" + aadhar + '\'' +
-                ", isVaccinated=" + isVaccinated +
+                ", isVaccinated=" + vaccinated +
                 ", isInfected=" + isInfected +
                 '}';
     }

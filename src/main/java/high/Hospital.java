@@ -23,12 +23,12 @@ public class Hospital {
             Vaccinator vaccinator = getAvailableVaccinator(vaccinators);
             Patient infectedPatient = getInfectedPatient(patients);
             if(v.isUsedAfterInfection() && infectedPatient!=null && !infectedPatient.isVaccinated()){
-                vaccinator.vaccinate(v, infectedPatient);
+                vaccinator.isVaccinationSuccessful(v, infectedPatient);
                 continue;
             }
             Patient nonInfectedPatient = getNonInfectedPatient(patients);
             if (v.isUsedBeforeInfection() && nonInfectedPatient!=null && !nonInfectedPatient.isVaccinated()) {
-                vaccinator.vaccinate(v, nonInfectedPatient);
+                vaccinator.isVaccinationSuccessful(v, nonInfectedPatient);
             }
         }
         System.out.println("Finally after all vaccinations");
